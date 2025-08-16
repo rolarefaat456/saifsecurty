@@ -1,31 +1,34 @@
-// components/services_data_model.dart
+// components/models/services_data_model.dart
 import 'package:saifalmirgab/components/assetsimage.dart';
+import 'package:saifalmirgab/components/data.dart';
 
 class ServicesDataModel {
-  List servicesdata = [
+  final DataApp data = DataApp();
+
+  final List<Map<String, dynamic>> servicesdata = [
     {
-      'image' : Assets.assetsImages3ndbab2zaz,
-      'text' : 'Reception/Event Security'
+      'image': Assets.assetsImages3ndbab2zaz,
+      'text': DataApp().data['Reception']['en'],
     },
     {
-      'image' : Assets.assetsImagesPolicecar,
-      'text' : 'Protocol & Escort Services'
+      'image': Assets.assetsImagesPolicecar,
+      'text': DataApp().data['Protocol']['en'],
     },
     {
-      'image' : Assets.assetsImagesM3raglbyglbya,
-      'text' : 'Corporate Office'
+      'image': Assets.assetsImagesM3raglbyglbya,
+      'text': DataApp().data['Corporate']['en'],
     },
     {
-      'image' : Assets.assetsImagesBdahro,
-      'text' : 'Security Guards'
+      'image': Assets.assetsImagesBdahro,
+      'text': DataApp().data['Security']['en'],
     },
     {
-      'image' : Assets.assetsImagesBodyGuardServices,
-      'text' : 'Body Guard Services'
+      'image': Assets.assetsImagesBodyGuardServices,
+      'text': DataApp().data['Body']['en'],
     },
     {
-      'image' : Assets.assetsImagesCloseProtectionServices,
-      'text' : 'Close Protection Services'
+      'image': Assets.assetsImagesCloseProtectionServices,
+      'text': DataApp().data['Close']['en'],
     },
   ];
 }

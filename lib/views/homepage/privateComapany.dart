@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/app_text.dart';
 import 'package:saifalmirgab/components/assetsimage.dart';
 import 'package:saifalmirgab/components/colorsapp.dart';
+import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
 class PrivateSecurtyComapany extends StatefulWidget  {
@@ -15,6 +16,7 @@ class PrivateSecurtyComapany extends StatefulWidget  {
 
 class _PrivateSecurtyComapanyState extends State<PrivateSecurtyComapany> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  DataApp data = new DataApp();
       @override
   // ignore: unused_element
   void initState() {
@@ -49,7 +51,7 @@ class _PrivateSecurtyComapanyState extends State<PrivateSecurtyComapany> with Si
                   : MediaQuery.sizeOf(context).width < 1200
                   ? MediaQuery.sizeOf(context).height / 2
                   : MediaQuery.sizeOf(context).height / 2.5,
-              child: TextData(title: 'Your Private Security Comapany Choice ', text: 'At Saif Al Mirgab Security, our sole objective is to become a household name in the private\nsecurity industry, by practically demonstrating the ability to provide professional\nprotective services to industries, commercial houses and private individuals\nwithin our area of operation at very competitive rates.')
+              child: TextData(title: data.data['private']['en'], text: data.data['privatetext']['en'])
             ),
             Container(
               width: double.infinity,
@@ -75,7 +77,7 @@ class _PrivateSecurtyComapanyState extends State<PrivateSecurtyComapany> with Si
                     : MediaQuery.sizeOf(context).width < 1200
                     ? MediaQuery.sizeOf(context).height / 2
                     : MediaQuery.sizeOf(context).height / 2.5,
-                child: TextData(title: 'Our distinguished work history', text: 'Our Work History in Saif Al Mirgab\n At Saif Al Mirgab, we have built a strong track record in providing professional, well-trained\n security guards. With proven experience across government, commercial, and high-security\n sites, our team is known for reliability, discipline, and commitment to safety. We deliver\n trusted protection with integrity.',
+                child: TextData(title: data.data['distingushed']['en'], text: data.data['distingushedtext']['en'],
                 titleColor: AppColors.White,textColor: AppColors.White,
                 ),
               ),

@@ -3,11 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/assets.dart';
 import 'package:saifalmirgab/components/colorsapp.dart';
+import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
 class CallUs extends StatelessWidget {
-  const CallUs({super.key});
-
+  CallUs({super.key});
+  DataApp dataApp = DataApp();
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -39,9 +40,9 @@ class CallUs extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextData(
-                        title: 'CALL US',
+                        title: dataApp.data['call']['en'],
                         text:
-                            'If you are looking for a reliable security partner who puts your safety first, we are here to\n meet your expectations. At Saif Al Mirqab, we dont just provide services—we offer peace of\n mind. Our team is ready to listen to your needs and provide appropriate solutions with\n professionalism and care. Dont hesitate, contact us and letis begin our journey together\n toward a safer environment.',
+                            dataApp.data['call_us_text']['en'],
                         titleColor: AppColors.White,
                         textColor: AppColors.White,
                       ),

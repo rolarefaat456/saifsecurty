@@ -8,10 +8,9 @@ import 'package:saifalmirgab/components/data.dart';
 class SaifAlMirgab extends StatelessWidget {
    SaifAlMirgab({
     super.key,
-    required this.data,
   });
 
-  final DataApp data;
+  DataApp data = new DataApp();
 
   @override
   Widget build(BuildContext context) {

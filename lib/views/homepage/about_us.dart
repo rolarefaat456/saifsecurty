@@ -3,12 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/assetsimage.dart';
 import 'package:saifalmirgab/components/colorsapp.dart';
+import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
 class AboutUs extends StatelessWidget {
-  const AboutUs({
+  AboutUs({
     super.key,
   });
+
+  DataApp dataApp = DataApp();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,7 @@ class AboutUs extends StatelessWidget {
         children: [
           Expanded(
             
-            child: TextData(title: 'Our distinguished work history', text: 'Saif Al Mirgab is a leading provider of professional security guard services, committed to protecting people, property, and assets with integrity and excellence. With a strong foundation of experience and a reputation for reliability, we deliver tailored security solutions across government, commercial, and private sectors. Our guards are highly trained, disciplined, and supported by modern systems to ensure maximum efficiency and safety. At Saif Al Mirgab, your security is our mission.', titleColor: AppColors.Yellow, textColor: AppColors.White,),
+            child: TextData(title: dataApp.data['distingushed']['en'], text: dataApp.data['leading']['en'], titleColor: AppColors.Yellow, textColor: AppColors.White,),
           ),
           // MediaQuery.sizeOf(context).width<900? SizedBox() : Spacer(),
           Stack(

@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/app_text.dart';
 import 'package:saifalmirgab/components/assets.dart';
 import 'package:saifalmirgab/components/colorsapp.dart';
+import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
 class OurPages extends StatelessWidget {
-  const OurPages({
+  OurPages({
     super.key,
   });
-
+  DataApp dataApp = DataApp();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +23,7 @@ class OurPages extends StatelessWidget {
           children: [
             Expanded(child: Container(
               margin: EdgeInsets.symmetric(horizontal: 15),
-              child: TextData(title: 'Our Pages', text: 'HOME - ABOUT US - CALL US - SERVICES\nRecruitment Department', textColor: AppColors.White, titleColor: AppColors.White,))),
+              child: TextData(title: dataApp.data['Pages']['en'], text: dataApp.data['home']['en'], textColor: AppColors.White, titleColor: AppColors.White,))),
             Spacer(),
             Expanded(child: Image.asset(Assets.assetsImagesSaiflogo)),
             Spacer(),
@@ -35,7 +36,7 @@ class OurPages extends StatelessWidget {
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
                           child: Text(
-                            'Saif Al Mirgab For Security',
+                            dataApp.data['text']['en'],
                             style: AppTextStyles.style32w800(
                               context,
                             ),
@@ -45,7 +46,7 @@ class OurPages extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(10),
                         child: Text(
-                          '"Saif Al-Mirqab... protection that begins\n with trust and continues with\n commitment."',
+                          dataApp.data['textdown']['en'] ,
                           style: AppTextStyles.style24w500(
                             context,
                           ).copyWith(color: AppColors.White),

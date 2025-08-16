@@ -1,7 +1,6 @@
 // views/homepage/homepage.dart
 import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/app_text.dart';
-import 'package:saifalmirgab/components/assetsimage.dart';
 import 'package:saifalmirgab/components/colorsapp.dart';
 import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/views/homepage/Call_Us.dart';
@@ -30,14 +29,14 @@ class _HomepageState extends State<Homepage> {
       backgroundColor: AppColors.White,
       body: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: SaifAlMirgab(data: data)),
+          SliverToBoxAdapter(child: SaifAlMirgab()),
           SliverToBoxAdapter(child: PrivateSecurtyComapany()),
           SliverToBoxAdapter(
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  'OUR SERVICES',
+                  data.data['services']['en'],
                   style: AppTextStyles.style132w800(context),
                 ),
               ),
@@ -49,7 +48,7 @@ class _HomepageState extends State<Homepage> {
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  'ABOUT US',
+                  data.data['ABOUT']['en'],
                   style: AppTextStyles.style132w800(
                     context,
                   ).copyWith(color: AppColors.BabyBlack),
@@ -64,7 +63,7 @@ class _HomepageState extends State<Homepage> {
               child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  'Our certificates of excellence evidence\nof our commitment',
+                  data.data['certificates']['en'],
                   style: AppTextStyles.style80w800(
                     context,
                   ).copyWith(color: AppColors.Yellow),
@@ -85,7 +84,7 @@ class _HomepageState extends State<Homepage> {
               color: AppColors.Yellow,
               child: Center(
                 child: Text(
-                  'All rights reserved to Saif Al Mirgab Security Company',
+                  data.data['homefinish']['en'] ,
                   style: AppTextStyles.style24w500(
                     context,
                   ).copyWith(color: Colors.black),
