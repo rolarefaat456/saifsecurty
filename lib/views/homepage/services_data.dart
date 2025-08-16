@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/app_text.dart';
 import 'package:saifalmirgab/components/models/services_data_model.dart';
 
+// ignore: must_be_immutable
 class ServicesData extends StatelessWidget {
   ServicesData({super.key});
 

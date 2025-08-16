@@ -7,6 +7,7 @@ import 'package:saifalmirgab/components/colorsapp.dart';
 import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
+// ignore: must_be_immutable
 class OurPages extends StatelessWidget {
   OurPages({
     super.key,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:saifalmirgab/components/data.dart';
 import 'package:saifalmirgab/components/widgets/text_data.dart';
 
+// ignore: must_be_immutable
 class RecruitmentDepartment extends StatelessWidget {
   RecruitmentDepartment({
     super.key,
